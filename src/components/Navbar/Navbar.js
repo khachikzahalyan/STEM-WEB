@@ -17,7 +17,7 @@ const Navbar = () => {
     <header className="navbar">
       <div className="navbar__top">
         <Link to="/" className="navbar__logo">
-          <img src='https://images.ctfassets.net/pc40tpn1u6ef/53uHpRwHaK9sso1qyHHEac/ff0836356ad19c1610be81b5ae6f06d4/STEM-Logo-220801.svg'  className="logo-icon"/>
+          <img alt='logo' src='https://images.ctfassets.net/pc40tpn1u6ef/53uHpRwHaK9sso1qyHHEac/ff0836356ad19c1610be81b5ae6f06d4/STEM-Logo-220801.svg'  className="logo-icon"/>
         </Link>
         <nav className="navbar__menu">
           {menuItems.map(({ name, path }) => (
