@@ -11,7 +11,7 @@ const Importance = () => {
       </p>
 
       <div className="card-grid">
-        <div className="card">
+        <div className="card-importance">
           <img
             src="https://images.unsplash.com/photo-1596496181871-9681eacf9764?q=80&w=1186&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Innovation"
@@ -24,7 +24,7 @@ const Importance = () => {
           </div>
         </div>
 
-        <div className="card">
+        <div className="card-importance">
           <img
             src="https://soeonline.american.edu/wp-content/uploads/sites/2/2022/08/blog-stem-important-960x640-1.jpg"
             alt="Future Professions"
@@ -37,9 +37,9 @@ const Importance = () => {
           </div>
         </div>
 
-        <div className="card">
+        <div className="card-importance">
           <img
-            src="https://indiadidac.org/wp-content/uploads/2024/02/wuqt_u6f7_210519-1024x579.jpg"
+            src="https://soeonline.american.edu/wp-content/uploads/sites/2/2022/08/blog-stem-960x640-1.jpg"
             alt="STEM Education"
           />
           <div className="card-content">
