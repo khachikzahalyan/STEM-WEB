@@ -62,7 +62,16 @@ export default function Footer() {
             <li onClick={showFAQ}>Հաճախակի հարցեր</li>
           </ul>
         </div>
-
+      {showModal && (
+        <div className="modal-backdrop" onClick={closeModal}>
+          <div className="modal" onClick={(e) => e.stopPropagation()}>
+            <h3>Կապ մեզ հետ</h3>
+            <p>🏠 Հասցե՝ {contactInfo.address}</p>
+            <p>📞 Հեռախոս՝ {contactInfo.phone}</p>
+            <button onClick={closeModal}>Փակել</button>
+          </div>
+        </div>
+      )}
         <div className="footer-column">
           <p className="footer-copy">
             © STEM Learning Ltd. շահույթ չհետապնդող ընկերություն (05081097)<br />
@@ -98,16 +107,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {showModal && (
-        <div className="modal-backdrop" onClick={closeModal}>
-          <div className="modal" onClick={(e) => e.stopPropagation()}>
-            <h3>Կապ մեզ հետ</h3>
-            <p>🏠 Հասցե՝ {contactInfo.address}</p>
-            <p>📞 Հեռախոս՝ {contactInfo.phone}</p>
-            <button onClick={closeModal}>Փակել</button>
-          </div>
-        </div>
-      )}
+
     </footer>
   );
 }
