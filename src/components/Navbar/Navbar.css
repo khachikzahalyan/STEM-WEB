@@ -41,9 +41,10 @@
 }
 
 .navbar__menu-item.active {
-  background-color: #1c2b36;
+  background-color: #f26c4f;
   color: white;
   border-radius: 4px;
+  padding: 8px;
 }
 
 .navbar__menu-item .arrow {

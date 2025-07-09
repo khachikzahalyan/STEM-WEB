@@ -6,11 +6,11 @@ const Navbar = () => {
   const location = useLocation();
 
   const menuItems = [
-    { name: 'About', path: '/about' },
-    { name: 'Importance', path: '/importance' },
-    { name: 'Problems', path: '/problems' },
-    { name: 'Future', path: '/future' },
-    { name: 'Sources', path: '/sources' },
+    { name: 'Մեր մասին', path: '/about' },
+    { name: 'Կարևոր', path: '/importance' },
+    { name: 'Խնդիրներ', path: '/problems' },
+    { name: 'Ապագա', path: '/future' },
+    { name: 'Նյութեր', path: '/sources' },
   ];
 
   return (
