@@ -5,7 +5,7 @@ import Importance from './pages/Importance/Importance';
 import Problems from './pages/Problems/Problems';
 import Future from './pages/Future/Future';
 import Sources from './pages/Sources/Sources';
-
+import Footer from './components/Footer/Footer';
 
 
 function App() {

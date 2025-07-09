@@ -1,4 +1,3 @@
-import React from 'react';
 import './About.css';
 
 const About = () => {
@@ -99,7 +98,7 @@ const About = () => {
       </section>
       <section className="about-section">
         <div className="about-row reverse">
-          
+
           <div className="about-text-col">
             <h2 className="about-subtitle">Աջակցեք մեր աշխատանքին՝ ներդրելով ապագայի մեջ</h2>
             <p>
