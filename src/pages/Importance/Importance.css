@@ -49,7 +49,12 @@ section blockquote {
   text-align: center;
   border-radius: 20px;
   box-shadow: 0 0 3px;
+  transition: transform 0.3s ease;
 }
+.card-importance:hover {
+  transform: translateY(-5px);
+}
+
 .card-content h2{
   color: #1e40af;
 }
