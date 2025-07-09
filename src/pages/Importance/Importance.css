@@ -1,0 +1,67 @@
+section {
+  padding: 120px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  color: #2d2d2d;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+}
+
+section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1e40af; /* темно-синий */
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+section p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+section blockquote {
+  border-left: 4px solid #3b82f6; /* голубая полоса */
+  padding-left: 1rem;
+  font-style: italic;
+  color: #374151;
+  margin-top: 2rem;
+}
+
+.card-grid{
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 0 3px;
+}
+.card-content h2{
+  color: #1e40af;
+}
+.card img{
+  border-radius: 20px 20px 0 0;
+}
+.steam-iimportance{
+  background-color: #e2e5ee;
+  margin-top: 40px;
+  padding: 10px;
+}
+.barriers{
+  border-top: 1px solid rgb(160, 157, 157);
+  padding:10px;
+}
