@@ -42,7 +42,17 @@
 .footer-column ul li:hover {
   color: #ff9369;
 }
+.footer-column ul li a {
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: block;
+}
 
+.footer-column ul li a:hover {
+  color: #ff9369;
+}
 .footer-copy {
   align-items: center;
   margin-top: 5px;
