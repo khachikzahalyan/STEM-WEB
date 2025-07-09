@@ -7,6 +7,7 @@ import Future from './pages/Future/Future';
 import Sources from './pages/Sources/Sources';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home';
+import ScrollToTop from './Utile/ScrollToTop';
 import "./App.css"
 
 
@@ -15,6 +16,7 @@ import "./App.css"
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
