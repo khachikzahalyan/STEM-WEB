@@ -11,7 +11,7 @@
 .navbar__top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 10px 30px;
   border-bottom: 1px solid #e0e0e0;
 }
@@ -39,7 +39,7 @@
   position: relative;
   cursor: pointer;
   padding: 5px;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .navbar__menu-item.active {

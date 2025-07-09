@@ -32,7 +32,6 @@ const Navbar = () => {
             </Link>
           ))}
         </nav>
-        <div className="navbar__search">🔍</div>
       </div>
     </header>
   );
