@@ -24,9 +24,7 @@
 }
 
 .logo-icon {
-  color: red;
-  font-size: 22px;
-  margin-right: 8px;
+  width: 120px;
 }
 
 .navbar__menu {
