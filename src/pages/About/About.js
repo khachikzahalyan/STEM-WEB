@@ -3,7 +3,8 @@ import './About.css';
 const About = () => {
   return (
     <div className="about-container">
-      <h1 className="about-title">Ի՞նչ է STEM-ը</h1>
+      <div className='about-title-content'>
+         <h1 className="about-title">Ի՞նչ է STEM-ը</h1>
 
       <p className="about-text">
         STEM-ը կրճատում է բնագիտություն (Science), տեխնոլոգիա (Technology), ճարտարագիտություն (Engineering) և մաթեմատիկա (Mathematics) բառերից։
@@ -25,8 +26,10 @@ const About = () => {
         Հայաստանում STEM կրթության զարգացումը խթանում է ուսանողների նորարար մտածողությունը, ձեռներեց հմտությունները և միջազգային գիտական համագործակցությանը մասնակցելու պատրաստակամությունը։
         Ապագայի աշխատաշուկայում STEM ոլորտների մասնագետների պահանջարկը շարունակաբար աճում է։
       </p>
-
-      <h2 className="connection-title">
+      </div>
+     
+<div className='connection-title-content'>
+  <h2 className="connection-title">
         Կապի մասին է խոսքը, և ահա որտեղ է սկսվում ձեր ճանապարհը
       </h2>
 
@@ -34,6 +37,8 @@ const About = () => {
         STEM-ը (Բնագիտություն, Տեխնոլոգիա, Ճարտարագիտություն և Մաթեմատիկա) առանցքային դեր ունի ապագան ձևավորելու գործում։
         Կամավորության, համագործակցության և կրթության միջոցով մենք ստեղծում ենք հնարավորություններ, որոնք ոգեշնչում են ապագա գիտնականներին և ինժեներներին։
       </p>
+</div>
+      
 
       <div className="card-grid">
         <div className="card">
