@@ -27,6 +27,7 @@ function App() {
             <Route path="/problems" element={<Problems />} />
             <Route path="/future" element={<Future />} />
             <Route path="/sources" element={<Sources />} />
+            <Route path="/detail/:sectionIndex/:itemIndex" element={<SourcesDetail />} />
           </Routes>
         </main>
         <Footer />
