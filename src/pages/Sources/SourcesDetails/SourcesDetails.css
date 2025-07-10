@@ -1,0 +1,60 @@
+.sources-detail-root {
+  max-width: 800px;
+  margin: 157px auto;
+  padding: 20px 30px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+.sources-detail-back-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #3b82f6;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  margin-bottom: 24px;
+  user-select: none;
+}
+
+.sources-detail-back-btn:hover {
+  background-color: #dbeafe;
+}
+
+.sources-detail-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+.sources-detail-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #374151;
+}
+
+.sources-detail-description {
+  font-size: 1.125rem;
+  margin-bottom: 24px;
+  color: #4b5563; /* серый */
+}
+
+.sources-detail-extra {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 16px;
+}
+
+.sources-detail-paragraph {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: #374151;
+  text-indent: 1.25rem;
+}
