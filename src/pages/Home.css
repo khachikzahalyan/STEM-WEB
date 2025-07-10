@@ -66,3 +66,26 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     border-radius: 16px;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+
+
+body {
+  background-image: url('https://cdn.wallpapersafari.com/14/91/85Fkmg.png');
+  background-position: center;
+    background-size: 1000px 1000px;
+}
