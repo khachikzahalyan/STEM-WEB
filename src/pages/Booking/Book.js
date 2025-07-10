@@ -6,11 +6,15 @@ import 'react-toastify/dist/ReactToastify.css';
 const CustomToast = ({ name, subject, date, time }) => (
   <div>
     <h4 style={{ margin: 0, padding: 10 }}>✅ Գրանցումն ընդունված է</h4>
-    <p style={{ margin: 0,marginTop: 10 }}>
-      {name}, դուք գրանցվել եք <br/>«{subject}» {date} Ժամը {time}-ին
-    </p>
+    <div style={{ marginTop: 10 }}>
+      <p style={{ margin: '0 0 8px 0' }}>{name}, դուք գրանցվել եք</p>
+      <p style={{ margin: 0 }}>
+        «{subject}» {date} Ժամը {time}-ին
+      </p>
+    </div>
   </div>
 );
+
 
 const Booking = () => {
   const [formData, setFormData] = useState({

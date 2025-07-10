@@ -81,11 +81,60 @@
 .fade-in {
   animation: fadeIn 0.8s ease forwards;
 }
-
-
-
 body {
   background-image: url('https://cdn.wallpapersafari.com/14/91/85Fkmg.png');
   background-position: center;
     background-size: 1000px 1000px;
+}
+@media (max-width: 600px) {
+  .home-container {
+    padding: 60px 15px;
+    max-width: 100%;
+  }
+@media (max-width: 600px) {
+  .home-container img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px; 
+    height: auto;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+}
+
+  .home-main h1 {
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+  }
+
+  .home-title {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+
+  .home-main p,
+  .home-main ul,
+  .home-highlight {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .home-main h2 {
+    font-size: 1.3rem;
+    margin-top: 16px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .home-container-content,
+  .what-find-content {
+    padding: 25px 20px;
+    border-radius: 12px;
+  }
+
+  body {
+    background-size: 600px 600px;
+    background-position: center;
+  }
 }

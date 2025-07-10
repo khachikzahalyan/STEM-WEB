@@ -138,3 +138,38 @@
 .modal button:hover {
   background-color: #1e2b34;
 }
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .footer-column {
+    width: 100%;
+  }
+
+  .footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .footer-column ul li,
+  .footer-column ul li a {
+    font-size: 14px;
+  }
+
+  .footer-icons {
+    justify-content: flex-start;
+    gap: 20px;
+    font-size: 24px;
+    margin-top: 20px;
+  }
+
+  .footer-copy {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+  }
+}

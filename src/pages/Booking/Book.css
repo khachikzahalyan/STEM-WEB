@@ -55,9 +55,72 @@
 .booking-form button:hover {
   background-color: #1e3a8a;
 }
+
 .custom-toast-absolute {
   position: absolute !important;
   padding: 20px !important;
   top: 20px !important;
   margin-top: 45px !important;
+  max-width: 350px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: #f0f7f4;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  color: #222;
+}
+
+.custom-toast-absolute h4 {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  color: #2c2c6b;
+}
+
+.custom-toast-absolute p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  .booking-container {
+    margin: 80px 15px;
+    padding: 25px;
+    border-radius: 10px;
+  }
+
+  .booking-container h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .booking-form {
+    gap: 15px;
+  }
+
+  .booking-form label {
+    font-size: 15px;
+  }
+
+  .booking-form input,
+  .booking-form select {
+    font-size: 15px;
+    padding: 6px;
+  }
+
+  .booking-form button {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .custom-toast-absolute h4 {
+    font-size: 1rem;
+  }
+
+  .custom-toast-absolute p {
+    margin: 0;
+    line-height: 1.4;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
 }

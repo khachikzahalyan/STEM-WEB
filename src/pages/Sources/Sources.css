@@ -56,3 +56,45 @@
   color: #374151;
   line-height: 1.6;
 }
+@media (max-width: 600px) {
+  .sources-root {
+    margin: 60px 15px;
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .sources-main-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .sources-section {
+    margin-bottom: 30px;
+  }
+
+  .sources-section-title {
+    font-size: 1.4rem;
+    padding-left: 10px;
+    margin-bottom: 16px;
+    border-left-width: 4px;
+  }
+
+  .sources-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .sources-card {
+    padding: 15px 18px;
+  }
+
+  .sources-card-title {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+  }
+
+  .sources-card-description {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+}
