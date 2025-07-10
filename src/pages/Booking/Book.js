@@ -28,8 +28,7 @@ const Booking = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    toast.success(`Շնորհակալություն, ${formData.name}։ 
-Դուք գրանցվել եք "${formData.subject}" սեսիային՝ ${formData.date}՝ ${formData.time}-ին։`, {
+    toast.success(`Շնորհակալություն, ${formData.name}։ Դուք գրանցվել եք "${formData.subject}" սեսիային՝ ${formData.date}՝ ${formData.time}-ին։`, {
       position: 'top-right',
       autoClose: 5000,
       hideProgressBar: false,

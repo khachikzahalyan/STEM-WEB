@@ -1,6 +1,6 @@
 .booking-container {
-  max-width: 600px;
-  margin: 50px auto;
+  max-width: 450px;
+  margin: 120px auto;
   background-color: #f8fafc;
   padding: 40px;
   border-radius: 12px;
@@ -31,7 +31,7 @@
 .booking-form input,
 .booking-form select {
   width: 100%;
-  padding: 10px;
+  padding: 7px;
   margin-top: 6px;
   border: 1px solid #d1d5db;
   border-radius: 6px;
