@@ -47,8 +47,9 @@ section blockquote {
   width: 300px;
   text-align: center;
   border-radius: 20px;
-  box-shadow: 0 0 3px;
+ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
+   background-color: #f1f5fc; 
 }
 .card-importance:hover {
   transform: translateY(-5px);
@@ -57,14 +58,16 @@ section blockquote {
 .card-content h2{
   color: #1e40af;
 }
+
 .card-importance img{
   border-radius: 20px 20px 0 0;
 }
 .steam-iimportance{
    background-color: #f9f4ef; 
-
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
   margin-top: 40px;
-  padding: 10px;
+  padding: 45px;
 }
 .barriers{
   border-top: 1px solid rgb(160, 157, 157);
