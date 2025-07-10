@@ -1,6 +1,12 @@
 import './About.css';
+import { useNavigate } from 'react-router-dom';
 
 const About = () => {
+    const navigate = useNavigate();
+
+  const handleJoinWebinar = () => {
+    navigate('/booking');
+  };
   return (
     <div className="about-container">
       <h1 className="about-title">Ի՞նչ է STEM-ը</h1>
@@ -41,7 +47,7 @@ const About = () => {
           <div className="card-body">
             <h3>Կամավորություն</h3>
             <p>Իմացեք, թե ով է STEM դեսպանը և ինչպես կարող եք դառնալ մեկն այդպիսին։</p>
-            <button className="card-button">Մասնակցել վեբինարին</button>
+            <button className="card-button" onClick={handleJoinWebinar}>Մասնակցել վեբինարին</button>
           </div>
         </div>
 
@@ -54,7 +60,7 @@ const About = () => {
           <div className="card-body">
             <h3>Հրավեր</h3>
             <p>Իմացեք, թե ինչպես հրավիրել STEM դեսպանի՝ ձեր դպրոցում դասավանդումն առավել հետաքրքիր դարձնելու համար։</p>
-            <button className="card-button">Մասնակցել վեբինարին</button>
+            <button className="card-button" onClick={handleJoinWebinar}>Մասնակցել վեբինարին</button>
           </div>
         </div>
 
@@ -67,7 +73,7 @@ const About = () => {
           <div className="card-body">
             <h3>Աշխատեք մեզ հետ</h3>
             <p>Իմացեք, թե ինչպես ներգրավել STEM կամավորներ ձեր կազմակերպությունում՝ կրթության հզորացման նպատակով։</p>
-            <button className="card-button">Մասնակցել վեբինարին</button>
+            <button className="card-button" onClick={handleJoinWebinar}>Մասնակցել վեբինարին</button>
           </div>
         </div>
       </div>
