@@ -3,9 +3,10 @@ import './Problems.css';
 
 const Problems = () => {
   return (
-    <div className="problems-container">
-      <h1 className="problems-title">STEM կրթության հիմնական մարտահրավերները</h1>
-
+    <div className='problems-container'> 
+    <h1 className="problems-title">STEM կրթության հիմնական մարտահրավերները</h1>
+ <div className="problems-context">
+    
       <p className="problems-text">
         Թեև STEM կրթությունը մեծ հնարավորություններ է ստեղծում, այսօր առկա են մի շարք լուրջ մարտահրավերներ, որոնք կրճատում են նրա հասանելիությունն ու արդյունավետությունը:
       </p>
@@ -39,6 +40,8 @@ const Problems = () => {
         Այս բոլոր մարտահրավերները հաղթահարվում են հստակ քաղաքականությամբ, ներդրումներով և նորարար ուսումնական մեթոդներով։ STEM-ը մեր ապագան է, ուստի կարևոր է, որ յուրաքանչյուր երեխա ունենա դրա զարգանալու հավասար հնարավորություն։
       </p>
     </div>
+    </div>
+   
   );
 };
 

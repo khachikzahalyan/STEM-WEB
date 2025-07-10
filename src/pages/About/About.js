@@ -33,9 +33,6 @@ const About = () => {
       </div>
      
 <div className='connection-title-content'>
-  <h2 className="connection-title">
-        Կապի մասին է խոսքը, և ահա որտեղ է սկսվում ձեր ճանապարհը
-        </h2>
 
       <h2 className="connection-title">
         Այստեղ է սկսվում ձեր ճանապարհը դեպի STEM
