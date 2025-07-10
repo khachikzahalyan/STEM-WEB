@@ -11,24 +11,25 @@ import ScrollToTop from './Utile/ScrollToTop';
 import Booking from './pages/Booking/Book';
 import "./App.css"
 
-
-
-
 function App() {
   return (
     <Router>
-      <ScrollToTop />
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/booking" element={<Booking />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/importance" element={<Importance />} />
-        <Route path="/problems" element={<Problems />} />
-        <Route path="/future" element={<Future />} />
-        <Route path="/sources" element={<Sources />} />
-      </Routes>
-      <Footer />
+      <div className="page-wrapper">
+        <ScrollToTop />
+        <Navbar />
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/booking" element={<Booking />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/importance" element={<Importance />} />
+            <Route path="/problems" element={<Problems />} />
+            <Route path="/future" element={<Future />} />
+            <Route path="/sources" element={<Sources />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </Router>
   );
 }
