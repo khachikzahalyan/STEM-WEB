@@ -1,0 +1,30 @@
+.problems-container {
+  padding: 120px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+}
+
+.problems-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #1e40af;
+  margin-bottom: 30px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.problems-subtitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0f172a;
+  margin-top: 30px;
+}
+
+.problems-text {
+  font-size: 18px;
+  margin-top: 10px;
+}
+

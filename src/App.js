@@ -8,6 +8,7 @@ import Sources from './pages/Sources/Sources';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home';
 import ScrollToTop from './Utile/ScrollToTop';
+import Booking from './pages/Booking/Book';
 import "./App.css"
 
 
@@ -20,6 +21,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/booking" element={<Booking />} />
         <Route path="/about" element={<About />} />
         <Route path="/importance" element={<Importance />} />
         <Route path="/problems" element={<Problems />} />
