@@ -9,7 +9,8 @@ const About = () => {
   };
   return (
     <div className="about-container">
-      <h1 className="about-title">Ի՞նչ է STEM-ը</h1>
+      <div className='about-title-content'>
+         <h1 className="about-title">Ի՞նչ է STEM-ը</h1>
 
       <p className="about-text">
         STEM-ը՝ բնագիտություն (Science), տեխնոլոգիա (Technology), ճարտարագիտություն (Engineering) և մաթեմատիկա (Mathematics), կրթական մոտեցում է, որը միավորում է այս չորս կարևոր ոլորտները։  
@@ -29,13 +30,23 @@ const About = () => {
         Այս ոլորտների մասնագետների պահանջարկն արագորեն աճում է ամբողջ աշխարհում։
       </p>
 
+      </div>
+     
+<div className='connection-title-content'>
+  <h2 className="connection-title">
+        Կապի մասին է խոսքը, և ահա որտեղ է սկսվում ձեր ճանապարհը
+        </h2>
+
       <h2 className="connection-title">
         Այստեղ է սկսվում ձեր ճանապարհը դեպի STEM
+
       </h2>
 
       <p className="connection-description">
         STEM-ը կարևոր դեր ունի ապագան կերտելու գործում։ Կամավորության, համագործակցության և կրթության միջոցով մենք ստեղծում ենք այնպիսի հնարավորություններ, որոնք ոգեշնչում են ապագա գիտնականներին, ինժեներներին ու ստեղծարարներին։
       </p>
+</div>
+      
 
       <div className="card-grid">
         <div className="card">
