@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext';
 import Navbar from './components/Navbar/Navbar';
 import About from './pages/About/About';
 import Importance from './pages/Importance/Importance';
@@ -10,10 +11,13 @@ import Footer from './components/Footer/Footer';
 import Home from './pages/Home';
 import ScrollToTop from './Utile/ScrollToTop';
 import Booking from './pages/Booking/Book';
+import Login from './pages/Login/Login';
 import './App.css';
+
 
 function App() {
   return (
+    <AuthProvider>
     <Router>
       <div className="page-wrapper">
         <ScrollToTop />
@@ -27,12 +31,14 @@ function App() {
             <Route path="/problems" element={<Problems />} />
             <Route path="/future" element={<Future />} />
             <Route path="/sources" element={<Sources />} />
+            <Route path='/login' element={<Login />} />
             <Route path="/detail/:sectionIndex/:itemIndex" element={<SourcesDetail />} />
           </Routes>
         </main>
         <Footer />
       </div>
     </Router>
+    </AuthProvider>
   );
 }
 

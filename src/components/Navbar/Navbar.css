@@ -111,6 +111,16 @@
   transition: all 0.3s ease;
 }
 
+.login-btn{
+  padding: 10px;
+  text-align: center;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.login-btn:hover{
+  background-color: #f26c4f;
+  color: white;
+}
 @media (max-width: 600px) {
   .navbar__top {
     align-items: center;

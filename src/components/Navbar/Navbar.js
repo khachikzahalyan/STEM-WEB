@@ -1,21 +1,35 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import './Navbar.css';
+import React, { useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
+import "./Navbar.css";
 
 const Navbar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+  const { isLoggedIn, logout } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { name: 'Մեր մասին', path: '/about' },
-    { name: 'Կարևոր', path: '/importance' },
-    { name: 'Խնդիրներ', path: '/problems' },
-    { name: 'Ապագա', path: '/future' },
-    { name: 'Նյութեր', path: '/sources' },
+    { name: "Մեր մասին", path: "/about" },
+    { name: "Կարևոր", path: "/importance" },
+    { name: "Խնդիրներ", path: "/problems" },
+    { name: "Ապագա", path: "/future" },
+    { name: "Նյութեր", path: "/sources" },
   ];
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleLogin = () => {
+    navigate("/login");
+    setIsOpen(false);
+  };
+
+  const handleLogout = () => {
+    logout();
+    navigate("/");
+    setIsOpen(false);
   };
 
   return (
@@ -30,24 +44,34 @@ const Navbar = () => {
         </Link>
 
         <button className="burger" onClick={toggleMenu} aria-label="Toggle menu">
-          <span className={`burger-line ${isOpen ? 'open' : ''}`}></span>
-          <span className={`burger-line ${isOpen ? 'open' : ''}`}></span>
-          <span className={`burger-line ${isOpen ? 'open' : ''}`}></span>
+          <span className={`burger-line ${isOpen ? "open" : ""}`}></span>
+          <span className={`burger-line ${isOpen ? "open" : ""}`}></span>
+          <span className={`burger-line ${isOpen ? "open" : ""}`}></span>
         </button>
 
-        <nav className={`navbar__menu ${isOpen ? 'open' : ''}`}>
+        <nav className={`navbar__menu ${isOpen ? "open" : ""}`}>
           {menuItems.map(({ name, path }) => (
             <Link
               key={name}
               to={path}
               className={`navbar__menu-item ${
-                location.pathname === path ? 'active' : ''
+                location.pathname === path ? "active" : ""
               }`}
               onClick={() => setIsOpen(false)}
             >
               {name}
             </Link>
           ))}
+
+          {isLoggedIn ? (
+            <button className="login-btn" onClick={handleLogout}>
+              Դուրս գալ
+            </button>
+          ) : (
+            <button className="login-btn" onClick={handleLogin}>
+              Մուտք գործել
+            </button>
+          )}
         </nav>
       </div>
     </header>
