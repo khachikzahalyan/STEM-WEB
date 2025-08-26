@@ -1,7 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
+import { useAuth } from "../../context/AuthContext";
 import "./future.css";
 
+const initialTexts = {
+  p1: "Աշխարհը արագ փոփոխվում է․ տեխնոլոգիաները թափ են առնում։",
+  p2: "Ապագայի աշխատաշուկան պահանջում է STEM գիտելիքներ։",
+  p3: "Կրիտիկական մտածողություն և վերլուծություն՝ 21-րդ դարի հմտություններ։",
+  p4: "Տվյալագետ (Data Scientist)",
+  p5: "Արհեստական բանականության ինժեներ",
+  p6: "Կիբեռանվտանգության մասնագետ",
+  p7: "Ռոբոտաշինության ինժեներ",
+  p8: "Վիրտուալ իրականության մշակող",
+  p9: "Աշխատել իրական նախագծերի վրա՝ պրակտիկա և խնդիրների լուծում։",
+  p10: "Ներառել արվեստը՝ STEAM մոտեցում։",
+  p11: "Խթանել համագործակցություն և թիմային ուսուցում։",
+  p12: "Օգտագործել տեխնոլոգիան՝ որպես գործիք, ոչ թե նպատակ։",
+  p13: "STEM կրթությունը ոչ միայն գիտելիքների հաղորդում է, այլև մտածողության մշակույթ։ Այն զարգացնում է տրամաբանական մտածողություն, թիմային աշխատանք, ստեղծագործականություն և հարմարվելու կարողություն՝ փոփոխվող աշխարհին։",
+  p14: "Ապագայի հասարակության մեջ կհաջողեն նրանք, ովքեր կկարողանան լուծել բարդ խնդիրներ, ստեղծել նոր տեխնոլոգիաներ և աշխատել տարբեր ոլորտների մասնագետների հետ։ Այս ամենի հիմքը դրվում է հենց դպրոցում՝ STEM կրթության միջոցով։",
+  p15: "Եթե մենք ցանկանում ենք պատրաստել ուժեղ, անկախ և առաջադեմ սերունդ, STEM ներդրումները պետք է սկսվեն հենց այսօր։"
+};
+
 const Future = () => {
+  const { isLoggedIn } = useAuth();
+  const [texts, setTexts] = useState(initialTexts);
+  const [editKey, setEditKey] = useState(null);
+  const [editValue, setEditValue] = useState('');
+
+  const handleEdit = (key) => {
+    setEditKey(key);
+    setEditValue(texts[key]);
+  };
+
+  const handleSave = (key) => {
+    setTexts(prev => ({
+      ...prev,
+      [key]: editValue
+    }));
+    setEditKey(null);
+    setEditValue('');
+  };
+
   return (
     <div className="future-container">
       <h1>ԱՊԱԳԱՅԻ ՏԵՍԼԱԿԱՆԸ՝ STEM ԿՐԹՈՒԹՅԱՆ ՄԻՋՈՑՈՎ</h1>
@@ -13,11 +51,27 @@ const Future = () => {
         />
         <div>
           <h2>Ինչու է STEM-ը կարևոր ապագայում</h2>
-          
-            <p>Աշխարհը արագ փոփոխվում է․ տեխնոլոգիաները թափ են առնում։</p>
-            <p>Ապագայի աշխատաշուկան պահանջում է STEM գիտելիքներ։</p>
-            <p>Կրիտիկական մտածողություն և վերլուծություն՝ 21-րդ դարի հմտություններ։</p>
-          
+          {['p1', 'p2', 'p3'].map(key => (
+            <div key={key} className="future-text-block">
+              {editKey === key ? (
+                <>
+                  <textarea
+                    value={editValue}
+                    onChange={e => setEditValue(e.target.value)}
+                    className="future-textarea"
+                  />
+                  <button onClick={() => handleSave(key)}>Save</button>
+                </>
+              ) : (
+                <>
+                  <p>{texts[key]}</p>
+                  {isLoggedIn && (
+                    <button onClick={() => handleEdit(key)}>Edit</button>
+                  )}
+                </>
+              )}
+            </div>
+          ))}
         </div>
       </div>
 
@@ -28,13 +82,27 @@ const Future = () => {
         />
         <div>
           <h2>Ապագայի մասնագիտություններ</h2>
-          
-            <p>Տվյալագետ (Data Scientist)</p>
-            <p>Արհեստական բանականության ինժեներ</p>
-            <p>Կիբեռանվտանգության մասնագետ</p>
-            <p>Ռոբոտաշինության ինժեներ</p>
-            <p>Վիրտուալ իրականության մշակող</p>
-          
+          {['p4', 'p5', 'p6', 'p7', 'p8'].map(key => (
+            <div key={key} className="future-text-block">
+              {editKey === key ? (
+                <>
+                  <textarea
+                    value={editValue}
+                    onChange={e => setEditValue(e.target.value)}
+                    className="future-textarea"
+                  />
+                  <button onClick={() => handleSave(key)}>Save</button>
+                </>
+              ) : (
+                <>
+                  <p>{texts[key]}</p>
+                  {isLoggedIn && (
+                    <button onClick={() => handleEdit(key)}>Edit</button>
+                  )}
+                </>
+              )}
+            </div>
+          ))}
         </div>
       </div>
 
@@ -45,28 +113,54 @@ const Future = () => {
         />
         <div>
           <h2>Ինչպիսին պետք է լինի STEM կրթությունը ապագայում</h2>
-          
-            <p>Աշխատել իրական նախագծերի վրա՝ պրակտիկա և խնդիրների լուծում։</p>
-            <p>Ներառել արվեստը՝ STEAM մոտեցում։</p>
-            <p>Խթանել համագործակցություն և թիմային ուսուցում։</p>
-            <p>Օգտագործել տեխնոլոգիան՝ որպես գործիք, ոչ թե նպատակ։</p>
-          
+          {['p9', 'p10', 'p11', 'p12'].map(key => (
+            <div key={key} className="future-text-block">
+              {editKey === key ? (
+                <>
+                  <textarea
+                    value={editValue}
+                    onChange={e => setEditValue(e.target.value)}
+                    className="future-textarea"
+                  />
+                  <button onClick={() => handleSave(key)}>Save</button>
+                </>
+              ) : (
+                <>
+                  <p>{texts[key]}</p>
+                  {isLoggedIn && (
+                    <button onClick={() => handleEdit(key)}>Edit</button>
+                  )}
+                </>
+              )}
+            </div>
+          ))}
         </div>
       </div>
 
-     <div className="final_section">
-      <h2>Եզրակացություն</h2>
-        <p>
-          STEM կրթությունը ոչ միայն գիտելիքների հաղորդում է, այլև մտածողության մշակույթ։ Այն զարգացնում է տրամաբանական մտածողություն, թիմային աշխատանք, ստեղծագործականություն և հարմարվելու կարողություն՝ փոփոխվող աշխարհին։
-        </p>
-        <p>
-          Ապագայի հասարակության մեջ կհաջողեն նրանք, ովքեր կկարողանան լուծել բարդ խնդիրներ, ստեղծել նոր տեխնոլոգիաներ և աշխատել տարբեր ոլորտների մասնագետների հետ։ Այս ամենի հիմքը դրվում է հենց դպրոցում՝ STEM կրթության միջոցով։
-        </p>
-        <p>
-          Եթե մենք ցանկանում ենք պատրաստել ուժեղ, անկախ և առաջադեմ սերունդ, STEM ներդրումները պետք է սկսվեն հենց այսօր։
-        </p>
+      <div className="final_section">
+        <h2>Եզրակացություն</h2>
+        {['p13', 'p14', 'p15'].map(key => (
+          <div key={key} className="future-text-block">
+            {editKey === key ? (
+              <>
+                <textarea
+                  value={editValue}
+                  onChange={e => setEditValue(e.target.value)}
+                  className="future-textarea"
+                />
+                <button onClick={() => handleSave(key)}>Save</button>
+              </>
+            ) : (
+              <>
+                <p>{texts[key]}</p>
+                {isLoggedIn && (
+                  <button onClick={() => handleEdit(key)}>Edit</button>
+                )}
+              </>
+            )}
+          </div>
+        ))}
       </div>
-
     </div>
   );
 };

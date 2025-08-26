@@ -69,7 +69,7 @@ const Navbar = () => {
             </button>
           ) : (
             <button className="login-btn" onClick={handleLogin}>
-              Մուտք գործել
+              Admin
             </button>
           )}
         </nav>

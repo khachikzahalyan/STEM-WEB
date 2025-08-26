@@ -25,7 +25,7 @@ const Login = () => {
 
     return (
         <div className="login-container">
-            <h2>Մուտք գործել</h2>
+            <h2>Admin panel</h2>
             <form onSubmit={handleSubmit} className="login-form">
                 <label>
                     Մուտքանուն
