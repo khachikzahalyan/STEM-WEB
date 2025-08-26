@@ -47,7 +47,7 @@ const About = () => {
   return (
     <div className="about-container">
       <div className='about-title-content'>
-        <h1 className="about-title">Ի՞նչ է STEM-ը</h1>
+        <h1 className="about-title"> Ի՞նչ է STEM-ը</h1>
         {['text1', 'text2', 'text3', 'text4'].map(key => (
           <div key={key} className="about-text-block">
             {editKey === key ? (
